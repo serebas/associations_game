@@ -1,0 +1,7 @@
+volumes:
+  - name:  static
+    mount: /staticfiles/
+
+services:
+  - redis:
+      tag: 5
