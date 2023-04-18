@@ -10,7 +10,5 @@ python manage.py makemigrations
 python manage.py migrate
 
 
-echo "-----------Run django local server--------- "
-python manage.py runserver 0.0.0.0:8000
-
-exec /usr/bin/supervisord -n
+echo "-----------Run gunicorn--------- "
+gunicorn -b :8000 chatProj.wsgi:application
